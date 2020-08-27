@@ -29,16 +29,16 @@
         <div class="container-fluid">
           <div class="row">
             <!-- sidebar -->
-            <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
-              <a href="#" class="navbar-brand text-white d-block mx-auto text-center py-3 mb-4 bottom-border">Telkom</a>
+            <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top" backgroundcolor="red">
+              <a href="#" class="navbar-brand text-white d-block mx-auto text-center py-3 mb-4 bottom-border" img src="/images/telkom_indeonesia.png">Telkom</a>
               <div class="bottom-border text-white d-block mx-auto text-center">
                 <p><?php echo $_SESSION['username']; ?></p>
               </div>
               <ul class="navbar-nav flex-column mt-4">
                 <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 current"><i class="fas fa-home text-light fa-lg mr-3"></i>Dashboard</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-user text-light fa-lg mr-3"></i>Profile</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-envelope text-light fa-lg mr-3"></i>Inbox</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-shopping-cart text-light fa-lg mr-3"></i>Sales</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-user text-light fa-lg mr-3"></i>Data 1</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-user text-light fa-lg mr-3"></i>Data 2</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-user text-light fa-lg mr-3"></i>Data 3</a></li>
               </ul>
             </div>
             <!-- end of sidebar -->
@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-md-8">
                   <ul class="navbar-nav">
-                     <li class="nav-item ml-md-auto "><a href="logout.php" class="nav-link" data-toggle="modal" data-target="#sign-out"><i class="fas fa-sign-out-alt text-danger fa-lg"></i></a></li>
+                     <li class="nav-item ml-md-auto "><a href="logout.php" class="nav-link" ><i class="fas fa-sign-out-alt text-danger fa-lg"></i></a></li>
                   </ul>
                 </div>
               </div>
@@ -82,6 +82,42 @@
       </div>
     </div>
     <!-- end of modal -->
+  <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-light py-5">
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Nama Dokument</th>
+      <th scope="col">Deskripsi</th>
+      <th scope="col">Data Cabang</th>
+      <th scope="col">download</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>TentangTelkom</td>
+      <td>Dokumen ini berisi tentang sejarah telkom</td>
+      <td>Bandung</td>
+      <td><button type="button" class="btn btn-danger" data-dismiss="modal">Download</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Indihome</td>
+      <td>Dokumen ini berisi tentang paket indihome</td>
+      <td>Cirebon</td>
+      <td><button type="button" class="btn btn-danger" data-dismiss="modal">Download</button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Triple Play</td>
+      <td>Dokumen ini berisi tentang paket triple play</td>
+      <td>Majalengka</td>
+      <td><button type="button" class="btn btn-danger" data-dismiss="modal">Download</button></td>
+    </tr>
+  </tbody>
+</table>
+  </div>
    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
