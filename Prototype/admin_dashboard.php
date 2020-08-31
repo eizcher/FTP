@@ -1,3 +1,4 @@
+<?php include("koneksi.php"); ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -29,16 +30,19 @@
         <div class="container-fluid">
           <div class="row">
             <!-- sidebar -->
-            <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top" backgroundcolor="red">
-              <a href="#" class="navbar-brand text-white d-block mx-auto text-center py-3 mb-4 bottom-border" img src="/images/telkom_indeonesia.png">Telkom</a>
+            <div class="col-xl-2 col-lg-3 col-md-4 sidebar  fixed-top" backgroundcolor="red">
+            <div class="text-center">
+            <img src="images/telkom_indonesia_logo.png"  width="130" >
+            </div>
+      <a href="#" class="navbar-brand text-white d-block mx-auto text-center mb-4 "></a>
               <div class="bottom-border text-white d-block mx-auto text-center">
                 <p><?php echo $_SESSION['username']; ?></p>
               </div>
               <ul class="navbar-nav flex-column mt-4">
                 <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 current"><i class="fas fa-home text-light fa-lg mr-3"></i>Dashboard</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-user text-light fa-lg mr-3"></i>Data 1</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-user text-light fa-lg mr-3"></i>Data 2</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-user text-light fa-lg mr-3"></i>Data 3</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-user text-light fa-lg mr-3"></i>Data User</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-user text-light fa-lg mr-3"></i>Dokumen</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-user text-light fa-lg mr-3"></i>LOG</a></li>
               </ul>
             </div>
             <!-- end of sidebar -->
@@ -87,37 +91,41 @@
   <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">No</th>
-      <th scope="col">Nama Dokument</th>
-      <th scope="col">Deskripsi</th>
-      <th scope="col">Data Cabang</th>
-      <th scope="col">download</th>
+      <th scope="col">ID</th>
+      <th scope="col">USERNAME</th>
+      <th scope="col">PASSWORD</th>
+      <th scope="col">NAMA</th>
+      <th scope="col">CABANG</th>
+      <th scope="col">LEVEL</th>
+      <th scope="col">ACTION</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>TentangTelkom</td>
-      <td>Dokumen ini berisi tentang sejarah telkom</td>
-      <td>Bandung</td>
-      <td><button type="button" class="btn btn-danger" data-dismiss="modal">Download</button></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Indihome</td>
-      <td>Dokumen ini berisi tentang paket indihome</td>
-      <td>Cirebon</td>
-      <td><button type="button" class="btn btn-danger" data-dismiss="modal">Download</button></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Triple Play</td>
-      <td>Dokumen ini berisi tentang paket triple play</td>
-      <td>Majalengka</td>
-      <td><button type="button" class="btn btn-danger" data-dismiss="modal">Download</button></td>
-    </tr>
-  </tbody>
-</table>
+    <tbody>
+       <?php
+         $sql = "SELECT * FROM tb_user";
+         $query = mysqli_query($koneksi, $sql);
+ 
+         while($siswa = mysqli_fetch_array($query)){
+            echo "<tr>";
+
+            echo "<td>".$siswa['id']."</td>";
+            echo "<td>".$siswa['username']."</td>";
+            echo "<td>".$siswa['password']."</td>";
+            echo "<td>".$siswa['nama_akun']."</td>";
+            echo "<td>".$siswa['cabang']."</td>";
+            echo "<td>".$siswa['level']."</td>";
+
+            echo "<td>";
+            echo "<a href='form-edit.php?id=".$siswa['id']."'>Edit</a> | ";
+            echo "<a href='hapus.php?id=".$siswa['id']."'>Hapus</a>";
+            echo "</td>";
+
+            echo "</tr>";
+         }
+       ?>
+      </tbody>
+  </table>
+  <p>Total: <?php echo mysqli_num_rows($query) ?></p>
   </div>
    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

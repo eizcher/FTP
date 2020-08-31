@@ -6,7 +6,8 @@ body {
 /* navbar */
 .sidebar {
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url(images/img1.jpeg);
+  background: linear-gradient(to bottom, #E8E8E8 21%, #800000 21%);
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
