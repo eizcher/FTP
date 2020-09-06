@@ -87,22 +87,18 @@
     </div>
     <!-- end of modal -->
 
-  <!-- <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-light py-5">
+  <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-light py-5">
   <table class="table table-striped">
   <thead>
     <tr>
       <th scope="col">ID</th>
       <th scope="col">USERNAME</th>
-      <th scope="col">PASSWORD</th>
-      <th scope="col">NAMA</th>
-      <th scope="col">CABANG</th>
-      <th scope="col">LEVEL</th>
-      <th scope="col">ACTION</th>
+      <th scope="col">WAKTU</th>
     </tr>
   </thead>
     <tbody>
        <?php
-         $sql = "SELECT * FROM tb_user";
+         $sql = "SELECT * FROM tb_log_login";
          $query = mysqli_query($koneksi, $sql);
  
          while($siswa = mysqli_fetch_array($query)){
@@ -110,15 +106,7 @@
 
             echo "<td>".$siswa['id']."</td>";
             echo "<td>".$siswa['username']."</td>";
-            echo "<td>".$siswa['password']."</td>";
-            echo "<td>".$siswa['nama_akun']."</td>";
-            echo "<td>".$siswa['cabang']."</td>";
-            echo "<td>".$siswa['level']."</td>";
-
-            echo "<td>";
-            echo "<a href='form-edit.php?id=".$siswa['id']."'>Edit</a> | ";
-            echo "<a href='hapus.php?id=".$siswa['id']."'>Hapus</a>";
-            echo "</td>";
+            echo "<td>".$siswa['waktu']."</td>";
 
             echo "</tr>";
          }
@@ -126,7 +114,7 @@
       </tbody>
   </table>
   <p>Total: <?php echo mysqli_num_rows($query) ?></p>
-  </div> -->
+  </div>
    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

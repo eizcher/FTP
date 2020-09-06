@@ -30,7 +30,9 @@
           <div class="row">
             <!-- sidebar -->
             <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
-              <a href="#" class="navbar-brand text-white d-block mx-auto text-center py-3 mb-4 bottom-border">Telkom</a>
+            <div class="col-xl-2 col-lg-3 col-md-4 sidebar  fixed-top" backgroundcolor="red">
+            <div class="text-center">
+            <img src="images/telkom_indonesia_logo.png"  width="130" >
               <div class="bottom-border text-white d-block mx-auto text-center">
                 <p><?php echo $_SESSION['username']; ?></p>
               </div>
@@ -85,11 +87,8 @@
    
     <!-- tables -->
     <section>
-      <div class="container-fluid">
-        <div class="row mb-5">
-          <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
-            <div class="row align-items-center">
-              <div class="col-xl-6 col-12 mb-4 mb-xl-0">
+    <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-light py-5">
+  <table class="table table-striped">
                 <h3 class="text-muted text-center mb-3">Staff Salary</h3>
                 <table class="table table-striped bg-light text-center">
                   <thead>

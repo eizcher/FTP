@@ -87,7 +87,7 @@
     </div>
     <!-- end of modal -->
 
-  <!-- <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-light py-5">
+  <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-light py-5">
   <table class="table table-striped">
   <thead>
     <tr>
@@ -126,7 +126,7 @@
       </tbody>
   </table>
   <p>Total: <?php echo mysqli_num_rows($query) ?></p>
-  </div> -->
+  </div>
    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
