@@ -6,7 +6,7 @@
 </head>
 <body>
  
-	<h1> PROTOTYPE UNTUK LOGIN</h1>
+	<h1> <img src="images/indi.png"></h1>
  
 	<?php 
 	if(isset($_GET['pesan'])){
@@ -17,7 +17,7 @@
 	?>
  
 	<div class="kotak_login">
-		<p class="tulisan_login">Silahkan login</p>
+		<p class="tulisan_login" image=>Silahkan login</p>
  
 		<form action="cek_login.php" method="post">
 			<label>Username</label>

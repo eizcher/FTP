@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background: red;
+    background: white;
 }
 
 h1 {
@@ -54,7 +54,7 @@ label {
 }
 
 .alert {
-    background: #e44e4e;
+    background: white;
     color: white;
     padding: 10px;
     text-align: center;
